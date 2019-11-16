@@ -21,11 +21,19 @@ public class Fibonacci implements Iterable<Integer> {
     private int[] fnumbers;
     private int next = 0;
     public Fibonacci(int length){
-        fnumbers = new int[length];
-        fnumbers[0] = 1;
-        fnumbers[1] = 1;
-        for (int i = 2; i < fnumbers.length; i++) {
-            fnumbers[i] = fnumbers[i-1] + fnumbers[i-2];
+        if (length == 0)
+            fnumbers[0] = 0;
+        if (length == 1) {
+            fnumbers[0] = 1;
+            fnumbers[1] = 1;
+        }
+        else {
+            fnumbers = new int[length];
+            fnumbers[0] = 1;
+            fnumbers[1] = 1;
+            for (int i = 2; i < fnumbers.length; i++) {
+                fnumbers[i] = fnumbers[i - 1] + fnumbers[i - 2];
+            }
         }
     }
     /**

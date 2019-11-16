@@ -18,10 +18,12 @@ public class Task3 implements Task {
 
         Fibonacci f20 = new Fibonacci(20);
         Iterator it = f20.iterator();
+        Integer sum = 0;
         while (it.hasNext()){
             Integer fnum = (Integer) it.next();
-            System.out.print(" " + fnum);
+            sum+=fnum;
         }
+
         /*
          * TODO(Студент): Выполнить задание №3
          *
