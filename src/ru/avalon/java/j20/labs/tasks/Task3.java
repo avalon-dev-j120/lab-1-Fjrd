@@ -16,7 +16,7 @@ public class Task3 implements Task {
     @Override
     public void run() {
 
-        Fibonacci f20 = new Fibonacci(20);
+        Fibonacci f20 = new Fibonacci(1);
         Iterator it = f20.iterator();
         Integer sum = 0;
         while (it.hasNext()){

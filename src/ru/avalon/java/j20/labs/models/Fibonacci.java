@@ -21,11 +21,13 @@ public class Fibonacci implements Iterable<Integer> {
     private int[] fnumbers;
     private int next = 0;
     public Fibonacci(int length){
+
         if (length == 0)
-            fnumbers[0] = 0;
+            throw new IllegalArgumentException("Cannot generate zero size Fibonacci sequence");
+        else
         if (length == 1) {
-            fnumbers[0] = 1;
-            fnumbers[1] = 1;
+            fnumbers = new int[1];
+            fnumbers[0] = 0;
         }
         else {
             fnumbers = new int[length];
