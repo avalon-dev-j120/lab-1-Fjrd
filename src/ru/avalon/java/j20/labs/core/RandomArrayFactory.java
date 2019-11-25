@@ -28,4 +28,13 @@ public class RandomArrayFactory implements Factory<int[], Integer> {
         }
         return array;
     }
+
+    public Integer[] castIntToInteger(int[] intArray) {
+
+        Integer[] result = new Integer[intArray.length];
+        for (int i = 0; i < intArray.length; i++) {
+            result[i] = Integer.valueOf(intArray[i]);
+        }
+        return result;
+    }
 }
